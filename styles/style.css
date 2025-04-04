@@ -1,0 +1,7 @@
+.footer {
+    text-align: center;
+    /* Place the footer in the base (background of the browser) */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
