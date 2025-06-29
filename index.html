@@ -19,19 +19,41 @@
     ></script>
 
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
-
     <script src="js/index.js"></script>
 
     <script>
       $(function () {
-        $("#header").load("includes/header.html");
         $("#footer").load("includes/footer.html");
       });
     </script>
   </head>
 
   <body>
-    <div id="header"></div>
+    <!-- Direct navigation for main page -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">🅿️ ParkJS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="index.html">🏠 Home</a>
+            <a class="nav-link" href="place/index.html">🅿️ Show Place</a>
+            <a class="nav-link" href="history/index.html">📚 History</a>
+            <a class="nav-link" href="about/index.html">ℹ️ About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <div class="container" style="text-align: center">
       <img src="images/park.png" alt="Park" width="200px" />
@@ -88,10 +110,12 @@
       </div>
 
       <div class="mt-4">
-        <a href="/place/" class="btn btn-outline-primary me-2"
+        <a href="place/index.html" class="btn btn-outline-primary me-2"
           >View Last Location</a
         >
-        <a href="/history/" class="btn btn-outline-secondary">View History</a>
+        <a href="history/index.html" class="btn btn-outline-secondary"
+          >View History</a
+        >
       </div>
     </div>
 

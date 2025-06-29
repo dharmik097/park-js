@@ -1,7 +1,224 @@
+/* Enhanced ParkJS Styles */
+
+/* Fix footer positioning */
 .footer {
-    text-align: center;
-    /* Place the footer in the base (background of the browser) */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  position: relative; /* Changed from absolute */
+  clear: both;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container enhancements */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px; /* Add space before footer */
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Button enhancements */
+.btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #28a745, #1e7e34);
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #ffc107, #e0a800);
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+}
+
+.btn-info {
+  background: linear-gradient(45deg, #17a2b8, #138496);
+}
+
+/* Form styling */
+.form-select,
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Navbar styling */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  border-radius: 8px;
+  padding: 8px 15px !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Alert styling */
+.alert {
+  border: none;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+/* Badge styling */
+.badge {
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+/* Image styling */
+img {
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Loading spinner */
+.spinner-border {
+  color: #007bff;
+}
+
+/* Page wrapper for better footer positioning */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .btn-group-vertical .btn {
+    margin-bottom: 5px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0056b3, #004085);
+}
+
+/* Fix for about page and long content pages */
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+/* Ensure footer stays at bottom for all pages */
+#footer {
+  margin-top: auto;
 }
